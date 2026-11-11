@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: stylo-boutique
+    runtime: node
+    plan: free
+    nodeVersion: '20'
+    buildCommand: npm ci
+    startCommand: npm start
+    healthCheckPath: /api/categories
+    autoDeploy: true

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Stylo — Boutique de vêtements Homme, Femme, Enfant</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="header">
+    <div class="container header-inner">
+      <a href="#/" class="logo">🧵 Stylo<span>.boutique</span></a>
+      <nav class="nav">
+        <a href="#/" data-nav>Accueil</a>
+        <a href="#/homme" data-nav>Homme</a>
+        <a href="#/femme" data-nav>Femme</a>
+        <a href="#/enfant" data-nav>Enfant</a>
+      </nav>
+      <div class="header-actions">
+        <form id="search-form" class="search-form">
+          <input type="search" id="search-input" placeholder="Rechercher un article…" aria-label="Rechercher" />
+        </form>
+        <a href="#/panier" class="cart-link" aria-label="Panier">
+          🛒 <span id="cart-count" class="cart-count">0</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main id="app" class="container" aria-live="polite"></main>
+
+  <footer class="footer">
+    <div class="container">
+      <p><strong>Stylo.boutique</strong> — Vêtements Homme · Femme · Enfant</p>
+      <p class="muted">Livraison offerte dès 60 € d'achat · Retours gratuits sous 30 jours</p>
+    </div>
+  </footer>
+
+  <div id="toast" class="toast" role="status"></div>
+
+  <script src="app.js"></script>
+</body>
+</html>
