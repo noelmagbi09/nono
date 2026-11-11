@@ -46,6 +46,20 @@ test-api.js          Tests d'intégration de l'API
 data/orders.json     Commandes (créé automatiquement)
 ```
 
+## Déploiement sur Render
+
+Le dépôt contient un Blueprint Render (`render.yaml`) prêt à l'emploi :
+
+1. Fusionner la pull request sur `main` (ou utiliser directement la branche).
+2. Sur [render.com](https://render.com) : **New → Blueprint**, sélectionner le dépôt `nono`.
+3. Render détecte `render.yaml` et crée le service web automatiquement :
+   - build : `npm ci`
+   - démarrage : `npm start`
+   - health check : `/api/categories`
+4. Redéploiement automatique à chaque push (`autoDeploy: true`).
+
+> Sur le plan gratuit, le service s'endort après 15 min d'inactivité ; la première requête peut prendre ~30 s.
+
 ## API
 
 | Méthode | Route                 | Description                                        |
